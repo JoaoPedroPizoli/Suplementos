@@ -9,9 +9,11 @@ process.on('unhandledRejection', (reason, promise) => {
 require('dotenv').config();
 const app = require('./src/app');
 console.log('Variáveis de ambiente carregadas.');
-
 console.log('Aplicação Express carregada.');
 
-app.listen(4040, () => {
-    console.log(`API RODANDO na porta ${4040}!`);
+
+const PORT = process.env.PORT || 4040;
+
+app.listen(PORT, () => {
+    console.log(`API RODANDO na porta ${PORT}!`);
 });
