@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-console.log('Configurando rotas.');
+
 app.use('/', routers);
 
 module.exports = app;
