@@ -13,5 +13,5 @@ console.log('Variáveis de ambiente carregadas.');
 console.log('Aplicação Express carregada.');
 
 app.listen(4040, () => {
-    console.log(`API RODANDO na porta ${3030}!`);
+    console.log(`API RODANDO na porta ${4040}!`);
 });
