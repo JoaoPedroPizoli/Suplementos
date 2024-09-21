@@ -6,7 +6,7 @@ const routers = require('./routers/routers')
 
 app.use(
     cors({
-      origin: 'https://https://frontend-suplementos.vercel.app/', 
+      origin: 'https://frontend-suplementos.vercel.app/', 
     })
   );
 
