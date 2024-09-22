@@ -1,10 +1,9 @@
-const { PrismaClient } = require('@prisma/client'); 
-const prisma = new PrismaClient(); 
+const { PrismaClient } = require('@prisma/client'); // Importando diretamente do Prisma Client
+const prisma = new PrismaClient(); // Inicializando o Prisma Client
 
 class Forms {
   async new(nome, email, whatsapp) {
     try {
- 
       await prisma.form.create({
         data: {
           nome,
