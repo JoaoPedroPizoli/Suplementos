@@ -2,19 +2,19 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-// Configuração do CORS para permitir apenas o seu domínio na Vercel
+// Configuração correta do CORS
 app.use(cors({
-  origin: 'https://https://frontend-suplementos.vercel.app/', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-  allowedHeaders: ['Content-Type', 'Authorization'], 
-  credentials: true 
+  origin: 'https://frontend-suplementos.vercel.app', // Corrija para garantir que o URL está correto
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir os métodos necessários
+  allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos que podem ser enviados
+  credentials: true // Se necessário para cookies ou autenticação
 }));
 
-// Outros middlewares e rotas
+// Middlewares da aplicação
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Definição das rotas da API
+// Rotas
 app.use('/', require('./routers/routers'));
 
 module.exports = app;
