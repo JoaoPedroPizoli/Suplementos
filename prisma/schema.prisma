@@ -9,9 +9,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model forms {
+model Form {
   id        Int      @id @default(autoincrement())
   nome      String
   email     String
   whatsapp  String
+  @@map("forms")
 }

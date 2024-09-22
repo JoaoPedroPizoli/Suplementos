@@ -1,4 +1,5 @@
 
+
 const Forms = require('../models/forms');
 
 class FormController {
@@ -16,4 +17,4 @@ class FormController {
   }
 }
 
-module.exports = new FormController()
+module.exports = new FormController();

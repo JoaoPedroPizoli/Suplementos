@@ -1,20 +1,20 @@
 
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+
+const prisma = require('../utils/prisma');
 
 class Forms {
   async new(nome, email, whatsapp) {
     try {
-      await prisma.forms.create({
+      await prisma.form.create({
         data: {
-          nome: nome,
-          email: email,
-          whatsapp: whatsapp,
+          nome,
+          email,
+          whatsapp,
         },
       });
       return { status: 200 };
     } catch (error) {
-      console.error('Erro ao inserir dados no banco: ', error);
+      console.error('Erro ao inserir dados no banco:', error);
       throw error;
     }
   }
