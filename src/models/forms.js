@@ -4,6 +4,7 @@ const prisma = new PrismaClient();
 class Forms {
   async new(nome, email, whatsapp) {
     try {
+ 
       await prisma.form.create({
         data: {
           nome,
