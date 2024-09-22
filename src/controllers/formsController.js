@@ -1,4 +1,4 @@
-const Forms = require('../models/forms');
+const Forms = require('../models/forms'); // Certifique-se de que o caminho está correto
 
 class FormController {
   async create(req, res) {
@@ -7,7 +7,7 @@ class FormController {
 
     try {
       console.time('Processo de criação do formulário');
-      const result = await Forms.new(nome, email, whatsapp);
+      const result = await Forms.new(nome, email, whatsapp); // Chama o método new corretamente
       console.timeEnd('Processo de criação do formulário');
 
       res.status(200).json({ success: true, message: 'Dados obtidos com sucesso!', data: result });
