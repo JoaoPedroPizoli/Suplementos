@@ -1,19 +1,23 @@
-const knex = require('../database/connection');
+
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 class Forms {
-    async new(nome, email, whatsapp) {
-        try {
-            await knex('forms').insert({
-                nome: nome,
-                email: email,
-                whatsapp: whatsapp
-            });
-            return { status: 200 };
-        } catch (error) {
-            console.log(error);  
-            return { status: 404, error: error.message }; 
-        }
+  async new(nome, email, whatsapp) {
+    try {
+      await prisma.forms.create({
+        data: {
+          nome: nome,
+          email: email,
+          whatsapp: whatsapp,
+        },
+      });
+      return { status: 200 };
+    } catch (error) {
+      console.error('Erro ao inserir dados no banco: ', error);
+      throw error;
     }
+  }
 }
 
-module.exports = new Forms;
+module.exports = new Forms();

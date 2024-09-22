@@ -1,0 +1,17 @@
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model forms {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  email     String
+  whatsapp  String
+}

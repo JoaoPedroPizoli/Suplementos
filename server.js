@@ -1,12 +1,8 @@
 
 require('dotenv').config();
 const app = require('./src/app');
-console.log('Variáveis de ambiente carregadas.');
-console.log('Aplicação Express carregada.');
+const port = process.env.PORT || 3000;
 
-
-const PORT = process.env.PORT || 4040;
-
-app.listen(PORT, () => {
-    console.log(`API RODANDO na porta ${PORT}!`);
+app.listen(port, () => {
+  console.log(`API rodando na porta ${port}!`);
 });
