@@ -1,6 +1,5 @@
-
-
-const prisma = require('../utils/prisma');
+const { PrismaClient } = require('@prisma/client'); 
+const prisma = new PrismaClient(); 
 
 class Forms {
   async new(nome, email, whatsapp) {

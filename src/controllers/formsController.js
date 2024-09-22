@@ -1,7 +1,4 @@
-
-
-const Forms = require('../models/forms');
-
+const Forms = require('../models/forms'); 
 class FormController {
   async create(req, res) {
     const { nome, email, whatsapp } = req.body;
