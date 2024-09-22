@@ -1,12 +1,13 @@
 require('dotenv').config();
+const formRouter = require('./routers/routers'); 
+const cors = require('cors');
 const express = require('express');
 const app = express();
-const cors = require('cors');
-const formRouter = require('./routers/routers'); 
-app.use(cors({
-  origin: 'https://frontend-suplementos.vercel.app',
-}));
 
+app.use(cors({
+  origin: 'https://frontend-suplementos.vercel.app/', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
