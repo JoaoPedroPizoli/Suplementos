@@ -5,6 +5,4 @@ const formController = require('../controllers/formsController');
 
 router.post('/', formController.create);
 
-  
-
 module.exports = router;
