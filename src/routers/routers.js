@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const formController = require('../controllers/formsController'); // Certifique-se de que o caminho está correto
+const formController = require('../controllers/formsController'); 
+
 
 router.post('/', formController.create);
 
