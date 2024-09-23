@@ -8,7 +8,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true 
-}));z
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
