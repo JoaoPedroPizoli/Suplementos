@@ -4,12 +4,11 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://starshape-lancamentos.com.br/', 
+  origin: 'https://starshape-lancamentos.com.br', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true 
-}));
-
+}));z
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
