@@ -4,7 +4,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://frontend-suplementos.vercel.app', 
+  origin: 'https://starshape-lancamentos.com.br/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true 
