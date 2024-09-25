@@ -8,7 +8,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://starshape-lancamentos.com.br/', 
+  origin: 'https://starshape-lancamentos.com.br', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
