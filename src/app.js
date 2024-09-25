@@ -1,3 +1,4 @@
+// src/app.js
 
 const express = require('express');
 const cors = require('cors');
@@ -14,6 +15,9 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+
+console.log('formRouter:', formRouter);
 
 app.use('/', formRouter);
 

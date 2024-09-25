@@ -1,11 +1,12 @@
-''
+// src/models/forms.js
+
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 class Forms {
   async new(nome, email, whatsapp) {
     try {
-      await prisma.forms.create({
+      await prisma.form.create({ 
         data: {
           nome,
           email,
