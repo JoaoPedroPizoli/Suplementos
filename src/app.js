@@ -1,6 +1,10 @@
+
 const express = require('express');
 const cors = require('cors');
+const formRouter = require('./routers/routers');
+
 const app = express();
+
 
 app.use(cors({
   origin: 'https://starshape-lancamentos.com.br/', 
@@ -8,11 +12,9 @@ app.use(cors({
   credentials: true,
 }));
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
-app.use('/', require('./routers/routers'));
+app.use('/', formRouter);
 
 module.exports = app;
